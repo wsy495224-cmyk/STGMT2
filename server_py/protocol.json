@@ -1,0 +1,1 @@
+{"transport":"tcp-json-lines","version":1,"client_messages":["register","login","list_characters","create_character","enter_world","move","chat"],"server_messages":["register_result","login_result","characters","create_character_result","enter_result","world_snapshot","player_joined","player_moved","chat","player_left","error"]}
