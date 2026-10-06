@@ -1,0 +1,46 @@
+{
+  "maps": [
+    {
+      "id": 0,
+      "name": "Green Valley",
+      "min_level": 1,
+      "boss": "Valley Guardian"
+    },
+    {
+      "id": 1,
+      "name": "Red Dunes",
+      "min_level": 5,
+      "boss": "Sand Tyrant"
+    },
+    {
+      "id": 2,
+      "name": "Mist Forest",
+      "min_level": 10,
+      "boss": "Ancient Treant"
+    },
+    {
+      "id": 3,
+      "name": "Frozen Pass",
+      "min_level": 15,
+      "boss": "Ice Warden"
+    },
+    {
+      "id": 4,
+      "name": "Sunset Ruins",
+      "min_level": 20,
+      "boss": "Sunset Colossus"
+    },
+    {
+      "id": 5,
+      "name": "Dark Marsh",
+      "min_level": 25,
+      "boss": "Bog Sovereign"
+    },
+    {
+      "id": 6,
+      "name": "Sky Plateau",
+      "min_level": 30,
+      "boss": "Storm Emperor"
+    }
+  ]
+}
