@@ -1,0 +1,41 @@
+name: STGMT2 Validation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate JSON
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          files = list(pathlib.Path(".").rglob("*.json"))
+          for p in files:
+              json.loads(p.read_text(encoding="utf-8"))
+          print(f"JSON PASS: {len(files)} files")
+          PY
+      - name: Compile Python
+        run: |
+          python - <<'PY'
+          import pathlib, py_compile
+          files = list(pathlib.Path(".").rglob("*.py"))
+          for p in files:
+              py_compile.compile(str(p), doraise=True)
+          print(f"PYTHON COMPILE PASS: {len(files)} files")
+          PY
+      - name: Run version tests
+        run: |
+          set -e
+          for t in $(find . -type f -name 'test_v*.py' | sort -V); do
+            echo "==> $t"
+            python "$t"
+          done
