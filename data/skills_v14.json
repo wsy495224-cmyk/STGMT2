@@ -1,0 +1,26 @@
+{
+  "Blade": [
+    "Quick Slash",
+    "Heavy Cut",
+    "Twin Edge",
+    "Whirlwind",
+    "Earth Break",
+    "Dragon Pulse"
+  ],
+  "Archer": [
+    "Arrow Burst",
+    "Piercing Shot",
+    "Wind Volley",
+    "Hawk Eye",
+    "Rain of Arrows",
+    "Sky Breaker"
+  ],
+  "Mystic": [
+    "Spark",
+    "Frost Orb",
+    "Arc Wave",
+    "Stone Pulse",
+    "Void Ring",
+    "Astral Burst"
+  ]
+}
